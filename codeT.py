@@ -28,14 +28,28 @@ if u_id == identifiant and  u_mdp == mdp:
 			print("command unknow")
 	print("see you soon...")
 
-if u_id != identifiant and u_mdp != mdp:
+if u_id != identifiant or u_mdp != mdp:
 	print("your id or password it's wrong, please, retry..")
-	while u_id != identifiant and u_mdp != mdp:
+
+	while u_id != identifiant or u_mdp != mdp:
 		print("retry connection : ")
 		u_id = input("enter your id : ")
 		u_mdp = input("Enter your password : ")
-
+		if u_id == identifiant and  u_mdp == mdp:
 	
+			while playgame:
+				menuchoice = input("> ")
+
+				if menuchoice == "again":
+					continue
+
+				elif menuchoice == "quit":
+					break
+
+				else:
+					print("command unknow")
+			print("see you soon...")
+
 	
 
 	
